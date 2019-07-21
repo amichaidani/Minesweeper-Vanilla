@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Mine Sweeper</title>
+</head>
+
+<body onload="initPage()">
+    <div class="container">
+        <div class="top-bar">
+            <div class="status-emoji" onclick="initGame()">😋</div>
+            <span class="play-again-msg not-visible">Click emoji to play again!</span>
+            <div class="timer-container">
+                <span class="timer"></span>
+            </div>
+
+            <div class="hint">
+                <button class="hint-button" onclick="setHintModeOn(this)">Get Hint: <span class="hints-left">3</span> left</button>
+            </div>
+        </div>
+        <div class="hint-mode hide">
+            <h3>HINT MODE ON</h3>
+            <small>You now may click a cell, and the surrounding cells will be revealed for 1 sec!</small>
+        </div>
+        <div class="board-container" oncontextmenu="return false">
+            <!-- This is where we inject the game board -->
+        </div>
+        <div class="level-buttons">
+            <!-- level buttons go here -->
+        </div>
+        <div class="level-info"></div>
+    </div>
+    <script src="js/utils.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/hints.js"></script>
+    <script src="js/levels.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
