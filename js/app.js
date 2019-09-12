@@ -37,15 +37,20 @@ function initGame() {
         isHintOn: false,
         hints: 3
     }
+    
     // Hide the 'play again' text
     hidePlayAgainMsg();
+    
     // Clear game Timer
     timerClear();
+    
     // Reset the hints button and hide the notification
     renderHintButton(gGame.hints)
     document.querySelector('.hint-mode').classList.add('hide');
+    
     // Set emoji to normal state
     setEmoji(EMOJI.normal);
+    
     // Build and render the game board
     gBoard = buildBoard();
     renderBoard(gBoard);
